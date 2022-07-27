@@ -1,4 +1,6 @@
-
+h1 {
+font-variant:small-caps;
+}
                     .table > tbody > tr > td {
      vertical-align: middle;
 }
