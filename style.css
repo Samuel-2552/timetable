@@ -1,6 +1,14 @@
 h1 {
 font-variant:small-caps;
 }
+h2{
+                        font-variant:normal;
+                        font-size:25px;
+}
+h3{
+                        font-variant:normal;
+                        font-size:20px;
+}
                     .table > tbody > tr > td {
      vertical-align: middle;
 }
