@@ -6,11 +6,15 @@
     cursor: pointer;
     font-size: 20px;
   }
+
   
   /* Darker background on mouse-over */
   .btn:hover {
     background-color: RoyalBlue;
   }
+.ALERT{
+    color:red;
+}
 h1 {
     font-variant:small-caps;
     }
@@ -19,11 +23,11 @@ h1 {
     }
     h2{
                             font-variant:normal;
-                            font-size:20px;
+                            font-size:15px;
     }
     h3{
                             font-variant:normal;
-                            font-size:15px;
+                            font-size:10px;
     }
                         .table > tbody > tr > td {
          vertical-align: middle;
