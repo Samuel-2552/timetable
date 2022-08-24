@@ -38,3 +38,25 @@ ul:after {
   display: table; /* 2 */
 }
 ul:after { clear: both; }
+
+.bell{
+  margin-top: 25px;
+  margin-left: 35px;
+}
+
+.fa-stack[data-count]:after {
+  position: absolute;
+  left:40;
+  top: 40px;
+  content: attr(data-count);
+  font-size: 30%;
+  padding: 0.6em;
+  border-radius: 999px;
+  line-height: 0.75em;
+  color: white;
+  background: rgba(255, 0, 0, 0.85);
+  text-align: center;
+  min-width: 2em;
+  font-weight: bold;
+}
+
