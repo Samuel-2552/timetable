@@ -18,11 +18,28 @@
             $("#myModal").modal('show');
         });
 	});
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+      }
 </script>
     </head>
     
     <body>
-
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            </i><a href="https://wa.me/9940149633?text=Good Morning Mam!">Dr. S. Baghavathi Priya</a>
+            <a href="https://wa.me/9566981643?text=Good Morning Mam!">Mrs. K.R. Sowmia</a>
+            <a href="https://wa.me/9940539503?text=Good Morning Mam!">Dr. J Julie</a>
+            <a href="https://wa.me/9944764210?text=Good Morning Mam!">Mrs. M. Sindhuja</a>
+            <a href="#">Mrs. S. Mahalakshmi</a>
+            <a href="https://wa.me/9043183977?text=Good Morning Mam!">Ms. S. Sangeetha</a>
+          </div>
         <div id="myModal" class="modal fade">
                 <div class="modal-dialog" >
                     <div class="modal-content" >
@@ -166,8 +183,8 @@
                                             <i class="fa fa-bell fa-stack-1x"></i>
                                         </span>
                                     </li>
-                                    <li>
-                                        <i class="fa fa-address-book contact" aria-hidden="true"></i>
+                                    <li id="main">
+                                        <i class="fa fa-address-book contact" aria-hidden="true" onclick="openNav()"></i>
                                     </li>
                                 </ul>
                               </ul>
@@ -221,14 +238,14 @@
                                     <center>
                                     <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">AI19P52/CS19541</span>
                                     <div class="margin-10px-top font-size14">AI for Game Programming / Computer Networks</div>
-                                    <div class="font-size13 text-light-gray">Ms. S. Saranya / Mrs. M. Sindhuja</div>
+                                    <div class="font-size13 text-light-gray">Ms. S. Sangeetha / Mrs. M. Sindhuja</div>
                                     </center>
                                 </td>
                                 <td>
                                             <center>
                                     <span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">AI19P52</span>
                                     <div class="margin-10px-top font-size14">AI for Game Programming</div>
-                                    <div class="font-size13 text-light-gray">Ms. S. Saranya</div>
+                                    <div class="font-size13 text-light-gray">Ms. S. Sangeetha</div>
                                                         </center>
                                 </td>
                                         </center>
@@ -283,7 +300,7 @@
                                             <center>
                                     <span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">AI19P52</span>
                                     <div class="margin-10px-top font-size14">AI for Game Programming</div>
-                                    <div class="font-size13 text-light-gray">Ms. S. Saranya</div>
+                                    <div class="font-size13 text-light-gray">Ms. S. Sangeetha</div>
                                             </center>
                                 </td>
                                 
@@ -367,7 +384,7 @@
                                             <center>
                                     <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">AI19511/AI19P52</span>
                                     <div class="margin-10px-top font-size14">Mobile Apllication Development Laboratory for ML and DL Applications / AI for Game Programming</div>
-                                    <div class="font-size13 text-light-gray">Mrs. S. Mahalakshmi / Ms. S. Saranya</div>
+                                    <div class="font-size13 text-light-gray">Mrs. S. Mahalakshmi / Ms. S. Sangeetha</div>
                                             </center>
                                 </td>
                             </tr>
@@ -451,7 +468,7 @@
                                             <center>
                                     <span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">AI19P52</span>
                                     <div class="margin-10px-top font-size14">AI for Game Programming</div>
-                                    <div class="font-size13 text-light-gray">Ms. S. Saranya</div>
+                                    <div class="font-size13 text-light-gray">Ms. S. Sangeetha</div>
                                                         </center>
                                 </td>
                                 <td>
