@@ -41,7 +41,10 @@ ul:after { clear: both; }
 
 .bell{
   margin-top: 25px;
-  margin-left: 35px;
+}
+.contact{
+  margin-top: 40px;
+  margin-right: 10px;
 }
 
 .fa-stack[data-count]:after {
