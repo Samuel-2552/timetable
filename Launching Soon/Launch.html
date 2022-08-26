@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    *{
+        background-color:black;
+    }
+    h2{
+        color:white;
+        position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: 76px 0 0 -85px;
+    }
+    h3{
+        color:white;
+        position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: 110px 0 0 -125px;
+    }
+.loader {
+    position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  border-right: 16px solid green;
+  border-bottom: 16px solid red;
+  border-left: 16px solid pink;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+</head>
+<body>
+<div class="loader"></div>
+<h2 style="">Comming Soon!</h2>
+<h3>Tune with us on 5th September!</h3>
+
+</body>
+</html>
