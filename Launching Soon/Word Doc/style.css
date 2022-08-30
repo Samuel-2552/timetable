@@ -1,0 +1,10 @@
+.w3-sofia {
+    font-family: Sofia, cursive;
+  }
+#content{
+    padding:20px;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
+    outline:none;
+    min-height:300px;
+    margin-top:25px;
+}
