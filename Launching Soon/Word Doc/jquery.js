@@ -1,5 +1,23 @@
 $(document).ready(function() {
     var size=3;
+    $('#save-btn').click(function() {
+        html2pdf().from(content).save('OD Letter');
+    });
+    $('#home-btn').click(function() {
+        window.location.href="http://bit.ly/aimltt";
+    });
+    $('#file-btn').click(function() {
+        content.innerHTML="";
+    });
+    $('#reload-btn').click(function() {
+        window.location.reload();
+    });
+    $('#undo-btn').click(function() {
+        document.execCommand('undo');
+    });
+    $('#redo-btn').click(function() {
+      document.execCommand('redo');
+    });
     $('#bold-btn').click(function() {
       document.execCommand('bold');
     });

@@ -12,16 +12,17 @@
     <script src="script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="jquery.js"></script>
+    <script src="htmltopdf.js"></script>
 </head>
 <body>
     <div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none; background-color: #1bc2a2;" id="leftMenu">
         <button onclick="closeLeftMenu()" class="w3-button w3-large w3-circle"><i class="fa fa-window-close w3-xxlarge"></i></button>
-        <br><button class="w3-button w3-circle"><h2 class="w3-sofia"><i class="fa fa-home w3-xxlarge"></i></h2></button>
-        <br><button class="w3-button w3-circle"><h2 class="w3-sofia"><i class="fa fa-file"></i></h2></button>
-        <br><button class="w3-button w3-circle"><h2 class="w3-sofia"><i class="fa fa-download"></i></h2></button>
-        <br><button class="w3-button w3-circle"><h2 class="w3-sofia"><i class="fa fa-refresh"></i></h2></button>
-        <br><button class="w3-button w3-circle"><h2 class="w3-sofia"><i class="fa fa-rotate-left"></i></h2></button>
-        <br><button class="w3-button w3-circle"><h2 class="w3-sofia"><i class="fa fa-rotate-right"></i></h2></button>
+        <br><button id="save-btn" class="w3-button w3-circle"><h2 class="w3-sofia"><i class="fa fa-download"></i></h2></button>
+        <br><button id="home-btn" class="w3-button w3-circle"><h2 class="w3-sofia"><i class="fa fa-home w3-xxlarge"></i></h2></button>
+        <br><button id="file-btn" class="w3-button w3-circle"><h2 class="w3-sofia"><i class="fa fa-file"></i></h2></button>
+        <br><button id="reload-btn" class="w3-button w3-circle"><h2 class="w3-sofia"><i class="fa fa-refresh"></i></h2></button>
+        <br><button id="undo-btn" class="w3-button w3-circle"><h2 class="w3-sofia"><i class="fa fa-rotate-left"></i></h2></button>
+        <br><button id="redo-btn" class="w3-button w3-circle"><h2 class="w3-sofia"><i class="fa fa-rotate-right"></i></h2></button>
     </div>
     <div class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-center" style="display:none;right:0; background-color: #1bc2a2;" id="rightMenu">
         <button onclick="closeRightMenu()" class="w3-button w3-large w3-circle"><i class="fa fa-window-close w3-xxlarge"></i></button>
@@ -44,9 +45,45 @@
             <h1 id="title" class="w3-sofia w3-display-topmiddle">OD Letter</h1>
             <button class="w3-button w3-xxlarge w3-display-right" onclick="openRightMenu()">&#9776;</button>
     </header>
-    <div class="w3-container">        
+    <div class="w3-container" style="margin-top:35px; font-family: Arial, Helvetica, sans-serif;">        
         <div id="content"  contenteditable="true" spellcheck="false">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate dicta ad sit maxime libero veritatis non eius vel magni delectus eum vero asperiores, explicabo ullam voluptates? Eius alias vero modi.
+            <h3 style="font-family: Arial, Helvetica, sans-serif;"><center><b><u>OD Letter</u></b></center></h3>
+            <br>
+            <br>
+            <div class="w3-display-container">
+                <div class="w3-display-topright">dd/mm/22</div>
+                <div class="w3-display-topleft"><u>Your Name</u></div>
+            </div>
+            <br>
+            <div><u>201501XXX</u></div>
+            <div>III Year AIML</div>
+            <div>REC</div>
+            <br>
+            <div>To Class Incharge</div>
+            <div>Mrs. K.R. Sowmia</div>
+            <div>III Year AIML</div>
+            <div>REC</div>
+            <br>
+            <div align="center"><b>Sub:</b> requesting permission to grant OD.</div>
+            <br>
+            <div>Respected Mam,</div>
+            <br>
+            <div style="justify-content:space-evenly;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                I have registered for a Technical Event <u>'Main Event Name'</u> being conducted on <u>dd/mm/22</u> by <u>'Institution Name'</u>.
+                This is a <u>'2'</u> day event.
+                I am participating in the following events:
+                <li>Event Name 1</li>
+                <li>Event Name 2</li>
+                <li>Event Name 3</li>
+                <br>
+                <div>I have herewith attached the details of the events mentioned above. So kindly grant me OD on <u>dd/mm/22</u> - <u>dd/mm/22</u>.</div>
+                <br>
+                <div>Thank You!</div>
+                <br>
+                <div>Yours Sincerely,</div>
+                <div><u>Your Name</u></div>
+            </div>
         </div>
     </div>
 </body>
