@@ -2,9 +2,9 @@
     font-family: Sofia, cursive;
   }
 #content{
-    padding:50px;
+    padding:20px;
     box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
     outline:none;
     min-height:800px;
-    margin:25px;
+    margin:5px;
 }
