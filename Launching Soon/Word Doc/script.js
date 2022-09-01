@@ -1,4 +1,5 @@
 function openLeftMenu() {
+  closeRightMenu();
     document.getElementById("leftMenu").style.width = "100px";
   document.getElementById("leftMenu").style.display = "block";
 }
@@ -8,6 +9,7 @@ function closeLeftMenu() {
 }
 
 function openRightMenu() {
+  closeLeftMenu();
     document.getElementById("rightMenu").style.width = "100px";
   document.getElementById("rightMenu").style.display = "block";
 }
