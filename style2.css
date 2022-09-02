@@ -112,7 +112,7 @@ ul:after { clear: both; }
   .sidebar a {font-size: 30px;}
 }
 .blinking{
-  animation:blinkingText 1.2s infinite;
+  animation:blinkingText 2.5s infinite;
 }
 @keyframes blinkingText{
   0%{     color: red;    }
