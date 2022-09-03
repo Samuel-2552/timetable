@@ -1,5 +1,9 @@
 $(document).ready(function() {
     var size=3;
+    $('#edit-btn').click(function() {
+        $('#edit-btn').hide();
+        $('#head').css({"height":"70px"});
+    });
     $('#save-btn').click(function() {
         html2pdf().from(content).save('OD Letter');
     });

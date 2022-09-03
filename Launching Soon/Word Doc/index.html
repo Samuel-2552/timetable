@@ -9,10 +9,23 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="jquery.js"></script>
     <script src="htmltopdf.js"></script>
+    <script>
+        function input(){
+            var name = prompt("Enter your Name:", "Your Name");
+            document.getElementById("n").innerHTML = name;
+            document.getElementById("n1").innerHTML = name;
+            var roll = prompt("Enter your Roll Number:", "201501000");
+            document.getElementById("r").innerHTML = roll;
+            var date = prompt("Enter today's date:", "dd/mm/yy");
+            document.getElementById("d").innerHTML = date;
+            document.getElementById("content").contentEditable = true;
+        }
+    </script>
 </head>
 <body>
     <div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none; background-color: #000000;" id="leftMenu">
@@ -40,22 +53,22 @@
 
 
 
-    <header style="background-color: #1bc2a2; height:70px" class="w3-display-container">
+    <header id="head" style="background-color: #1bc2a2; height:100px" class="w3-display-container w3-row">
             <button class="w3-button w3-xxlarge w3-display-left" onclick="openLeftMenu()">&#9776;</button>
-            <h1 id="title" class="w3-sofia w3-display-topmiddle">OD Letter</h1>
+            <h1 id="title" class="w3-sofia w3-display-topmiddle">OD Letter <button onclick="input();closeLeftMenu()" title="Edit" id="edit-btn" class="w3-button w3-hover-teal"><h2 class="w3-sofia"><i class="fa-regular fa-pen-to-square"></i></h2></button></h1>
             <button class="w3-button w3-xxlarge w3-display-right" onclick="openRightMenu()">&#9776;</button>
     </header>
     <div class="w3-container" style="margin-top:35px; font-family: Arial, Helvetica, sans-serif;">        
-        <div id="content"  contenteditable="true" spellcheck="false">
+        <div id="content"  contenteditable="false" spellcheck="false">
             <h3 style="font-family: Arial, Helvetica, sans-serif;"><center><b><u>OD Letter</u></b></center></h3>
             <br>
             <br>
             <div class="w3-display-container">
-                <div class="w3-display-topright">dd/mm/22</div>
-                <div class="w3-display-topleft">Your Name</div>
+                <div id='d' class="w3-display-topright">dd/mm/22</div>
+                <div class="w3-display-topleft n" id="n">Your Name</div>
             </div>
             <br>
-            <div>201501XXX</div>
+            <div id="r">201501XXX</div>
             <div>III Year AIML</div>
             <div>REC</div>
             <br>
@@ -82,7 +95,7 @@
                 <div>Thanking You.</div>
                 <br>
                 <div>Yours Sincerely,</div>
-                <div>Your Name</div>
+                <div id="n1">Your Name</div>
             </div>
         </div>
     </div>
