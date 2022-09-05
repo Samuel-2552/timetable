@@ -6,7 +6,7 @@ $(document).ready(function() {
         $('#head').css({"height":"70px"});
     });
     $('#save-btn').click(function() {
-        html2pdf().from(content).save('OD Letter');
+        html2pdf().from(content).save('Leave Letter');
     });
     $('#home-btn').click(function() {
         window.location.href="http://bit.ly/aimltt";

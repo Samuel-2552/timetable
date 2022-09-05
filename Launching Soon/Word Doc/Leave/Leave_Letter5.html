@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Documnet</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="jquery.js"></script>
+    <script src="htmltopdf.js"></script>
+    <script>
+        function input(){
+            var name = prompt("Enter your Name:", "Your Name");
+            document.getElementById("n").innerHTML = name;
+            document.getElementById("n1").innerHTML = name;
+            var roll = prompt("Enter your Roll Number:", "201501000");
+            document.getElementById("r").innerHTML = roll;
+            var date = prompt("Enter today's date:", "dd/mm/yy");
+            document.getElementById("d").innerHTML = date;
+            document.getElementById("content").contentEditable = true;
+        }
+    </script>
+</head>
+<body>
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none; background-color: #000000;" id="leftMenu">
+        <button title="Close" onclick="closeLeftMenu()" class="w3-button w3-hover-teal w3-large w3-circle"><i class="fa fa-window-close fa-inverse w3-xxlarge"></i></button>
+        <br><button onclick="closeLeftMenu()" title="Save as pdf" id="save-btn" class="w3-button w3-hover-teal w3-circle"><h2 class="w3-sofia"><i class="fa fa-download fa-inverse"></i></h2></button>
+        <br><button onclick="closeLeftMenu()" title="Home" id="home-btn" class="w3-button w3-hover-teal w3-circle"><h2 class="w3-sofia"><i class="fa fa-home fa-inverse w3-xxlarge"></i></h2></button>
+        <br><button onclick="closeLeftMenu()" title="New Document" id="file-btn" class="w3-button w3-hover-teal w3-circle"><h2 class="w3-sofia"><i class="fa fa-file fa-inverse"></i></h2></button>
+        <br><button onclick="closeLeftMenu()" title="Refresh" id="reload-btn" class="w3-button w3-hover-teal w3-circle"><h2 class="w3-sofia"><i class="fa fa-refresh fa-inverse"></i></h2></button>
+        <br><button onclick="closeLeftMenu()" title="Undo" id="undo-btn" class="w3-button w3-hover-teal w3-circle"><h2 class="w3-sofia"><i class="fa fa-rotate-left fa-inverse"></i></h2></button>
+        <br><button onclick="closeLeftMenu()" title="Redo" id="redo-btn" class="w3-button w3-hover-teal w3-circle"><h2 class="w3-sofia"><i class="fa fa-rotate-right fa-inverse"></i></h2></button>
+    </div>
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-center" style="display:none;right:0; background-color: #000000;" id="rightMenu">
+        <button title="Close" onclick="closeRightMenu()" class="w3-button w3-hover-teal w3-large w3-circle"><i class="fa fa-window-close fa-inverse w3-xxlarge"></i></button>
+        <br><button onclick="closeRightMenu()" title="Bold" id="bold-btn" class="w3-button w3-hover-teal w3-circle"><h2 class="w3-sofia"><i class="fa fa-bold fa-inverse"></i></h2></button>
+        <br><button onclick="closeRightMenu()" title="Italic" id="italic-btn" class="w3-button w3-hover-teal w3-circle"><h2 class="w3-sofia"><i class="fa fa-italic fa-inverse"></i></h2></button>
+        <br><button onclick="closeRightMenu()" title="Underline" id="underline-btn" class="w3-button w3-hover-teal w3-circle"><h2 class="w3-sofia"><i class="fa fa-underline fa-inverse"></i></h2></button>
+        <br><button onclick="closeRightMenu()" title="Font Increase" id="fonti-btn" class="w3-button w3-hover-teal w3-circle"><h2 class="w3-sofia"><i class="fa fa-font fa-inverse"></i><i class="fa fa-long-arrow-up fa-inverse"></i></h2></button>
+        <br><button onclick="closeRightMenu()" title="Font Decrease" id="fontd-btn" class="w3-button w3-hover-teal w3-circle"><h2 class="w3-sofia"><i class="fa fa-font fa-inverse"></i><i class="fa fa-long-arrow-down fa-inverse"></i></h2></button>
+        <br><button onclick="closeRightMenu()" title="Align Left" id="left-btn" class="w3-button w3-hover-teal w3-circle"><h2 class="w3-sofia"><i class="fa fa-align-left fa-inverse"></i></h2></button>
+        <br><button onclick="closeRightMenu()" title="Align Center" id="center-btn" class="w3-button w3-hover-teal w3-circle"><h2 class="w3-sofia"><i class="fa fa-align-center fa-inverse"></i></h2></button>
+        <br><button onclick="closeRightMenu()" title="Align Right" id="right-btn" class="w3-button w3-hover-teal w3-circle"><h2 class="w3-sofia"><i class="fa fa-align-right fa-inverse"></i></h2></button>
+        <br><button onclick="closeRightMenu()" title="Justify Content" id="justify-btn" class="w3-button w3-hover-teal w3-circle"><h2 class="w3-sofia"><i class="fa fa-align-justify fa-inverse"></i></h2></button>
+    </div>
+
+
+
+
+    <header id="head" style="background-color: #1bc2a2; height:100px" class="w3-display-container w3-row">
+            <button class="w3-button w3-xxlarge w3-display-left" onclick="openLeftMenu()">&#9776;</button>
+            <h1 id="title" class="w3-sofia w3-display-topmiddle">Letter <button onclick="input();closeLeftMenu()" title="Edit" id="edit-btn" class="w3-button w3-hover-teal"><h2 class="w3-sofia"><i class="fa-regular fa-pen-to-square"></i></h2></button></h1>
+            <button class="w3-button w3-xxlarge w3-display-right" onclick="openRightMenu()">&#9776;</button>
+    </header>
+    <div class="w3-container" style="margin-top:35px; font-family: Arial, Helvetica, sans-serif;">        
+        <div id="content"  contenteditable="false" spellcheck="false">
+            <h3 style="font-family: Arial, Helvetica, sans-serif;"><center><b><u>Leave Letter</u></b></center></h3>
+            <br>
+            <br>
+            <div class="w3-display-container">
+                <div id='d' class="w3-display-topright">dd/mm/22</div>
+                <div class="w3-display-topleft n" id="n">Your Name</div>
+            </div>
+            <br>
+            <div id="r">201501XXX</div>
+            <div>III Year AIML</div>
+            <div>REC</div>
+            <br>
+            <div>To Class Incharge</div>
+            <div>Mrs. K.R. Sowmia</div>
+            <div>III Year AIML</div>
+            <div>REC</div>
+            <br>
+            <div align="center"><b>Sub:</b> requesting to go to Health Center.</div>
+            <br>
+            <div>Respected Madam,</div>
+            <br>
+            <div style="justify-content:space-evenly;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                I am writing this letter to inform you that I am suffering from cold and fever, so I will not be able to attend the class. 
+                <br>
+                <br>
+                <div>Hence I hereby humbly request you to allow me to go to Health Center.</div>
+                <br>
+                <div>Thanking You.</div>
+                <br>
+                <div>Yours Sincerely,</div>
+                <div id="n1">Your Name</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
